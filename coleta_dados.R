@@ -15,14 +15,14 @@ library('dplyr')
 
 # A consulta SQL que deu origem à tabela foi:
 
-### "SELECT \* FROM basedosdados.br_me_rais.microdados_vinculos WHERE id_municipio = '4108304' AND ano = 2020"
+# "SELECT \* FROM basedosdados.br_me_rais.microdados_vinculos WHERE id_municipio = '4108304' AND ano = 2020"
 
 # Naturalmente, esta consulta pode ser personalizada para os mais diversos fins.
 
 # Por fim, a tabela foi importada para o R:
 
-projectid<-'raisturismofoz'
-query<-("SELECT * FROM `raisturismofoz.microdadosvinculos2020.vinculos2020`")
+projectid<-'<ID_DO_PROJETO_PESSOAL>'
+query<-("SELECT * FROM `<ID_COLECAO_E_TABELA_PESSOAL>`")
 tb <- bq_project_query(projectid, query)
 df <- bq_table_download(tb)
 
